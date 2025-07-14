@@ -12,6 +12,10 @@ return {
       require "configs.lspconfig"
     end,
   },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "stevearc/conform.nvim", config = function() require "configs.conform" end, },
+  { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {"c", "cpp", "c_sharp", "lua", "rust", "java", "javascript", "typescript", },
+  { "neovim/nvim-lspconfig", config = function() require("nvchad.configs.lspconfig").defaults() require("configs.lspconfig") end, }}}
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
